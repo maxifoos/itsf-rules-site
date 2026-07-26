@@ -66,7 +66,7 @@ const config: Config = {
       title: 'ITSF Standard Matchplay Rules',
       logo: {
         alt: 'ITSF Logo',
-        src: 'img/logo.svg',
+        src: 'img/itsf-logo.png',
       },
       items: [
         {

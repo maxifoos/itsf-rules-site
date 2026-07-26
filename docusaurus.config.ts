@@ -15,15 +15,13 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  // TODO: replace with your actual GitHub Pages URL, e.g. https://<github-user>.github.io
-  url: 'https://your-github-username.github.io',
+  url: 'https://maxifoos.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/itsf-rules-site/',
 
   // GitHub pages deployment config.
-  // TODO: replace with your actual GitHub org/user name and repo name.
-  organizationName: 'your-github-username', // Usually your GitHub org/user name.
+  organizationName: 'maxifoos', // Usually your GitHub org/user name.
   projectName: 'itsf-rules-site', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
@@ -45,9 +43,8 @@ const config: Config = {
         docs: {
           routeBasePath: '/docs',
           sidebarPath: './sidebars.ts',
-          // TODO: replace with your repo URL, or remove to drop the "edit this page" links.
           editUrl:
-            'https://github.com/your-github-username/itsf-rules-site/tree/main/',
+            'https://github.com/maxifoos/itsf-rules-site/tree/main/',
         },
         blog: false,
         theme: {

@@ -28,3 +28,48 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Glossary terms: any word/phrase defined in "2. Definitions", auto-detected
+   at build time (see src/remark/glossaryTerms.ts) and shown with a tooltip. */
+.def-term {
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-color: #dc2626;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 3px;
+  cursor: help;
+  position: relative;
+}
+
+.def-term::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%) translateY(4px);
+  background: #1f2937;
+  color: #f9fafb;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.35;
+  text-decoration: none;
+  white-space: normal;
+  width: max-content;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.12s ease, transform 0.12s ease;
+  z-index: 9999;
+}
+
+.def-term:hover::after,
+.def-term:focus::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}

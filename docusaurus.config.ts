@@ -1,6 +1,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import glossaryTermsPlugin from './src/remark/glossaryTerms';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -43,6 +44,7 @@ const config: Config = {
         docs: {
           routeBasePath: '/docs',
           sidebarPath: './sidebars.ts',
+          remarkPlugins: [glossaryTermsPlugin],
           editUrl:
             'https://github.com/maxifoos/itsf-rules-site/tree/main/',
         },

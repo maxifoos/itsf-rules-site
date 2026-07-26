@@ -42,7 +42,12 @@ const config: Config = {
       'classic',
       {
         docs: {
-          routeBasePath: '/rules',
+          // Docs-only mode: the docs plugin owns the site root, so the
+          // "Standard Matchplay Rules" category index (see its
+          // _category_.json) can be the actual homepage without a redirect.
+          // Individual chapters get an explicit /rules/* slug (see each
+          // chapter's frontmatter) to keep their own URLs unchanged.
+          routeBasePath: '/',
           sidebarPath: './sidebars.ts',
           remarkPlugins: [glossaryTermsPlugin],
           // No editUrl: this is a public read-only site, so no "Edit this page" link.

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 15
 title: 15. Impairing Play
-slug: /impairing-play
+slug: /rules/impairing-play
 description: The rules against distraction, reset, and jarring an opponent.
 ---
 

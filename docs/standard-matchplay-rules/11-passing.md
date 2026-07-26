@@ -1,7 +1,7 @@
 ---
 sidebar_position: 11
 title: 11. Passing
-slug: /passing
+slug: /rules/passing
 description: Restrictions on passing a stopped or pinned ball between certain rods.
 ---
 

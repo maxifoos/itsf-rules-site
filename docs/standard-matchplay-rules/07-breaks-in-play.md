@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 title: 7. Breaks in Play
-slug: /breaks-in-play
+slug: /rules/breaks-in-play
 description: Pauses, dead balls, balls off table, and interrupts that suspend active play.
 ---
 

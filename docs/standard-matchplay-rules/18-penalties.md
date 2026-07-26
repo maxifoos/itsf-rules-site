@@ -1,7 +1,7 @@
 ---
 sidebar_position: 18
 title: 18. Penalties
-slug: /penalties
+slug: /rules/penalties
 description: The catalogue of every penalty outcome referenced throughout the rules.
 ---
 

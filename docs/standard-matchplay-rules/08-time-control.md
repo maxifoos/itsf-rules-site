@@ -1,7 +1,7 @@
 ---
 sidebar_position: 8
 title: 8. Time Control
-slug: /time-control
+slug: /rules/time-control
 description: A summary table of every time limit in the rules and what happens when it expires.
 ---
 

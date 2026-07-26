@@ -1,7 +1,7 @@
 ---
 sidebar_position: 10
 title: 10. Spinning
-slug: /spinning
+slug: /rules/spinning
 description: The restriction on rotating a rod more than 360 degrees around a transition.
 ---
 

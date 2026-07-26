@@ -1,7 +1,7 @@
 ---
 sidebar_position: 14
 title: 14. Switching Positions
-slug: /switching-positions
+slug: /rules/switching-positions
 description: When doubles partners are allowed to swap playing positions.
 ---
 

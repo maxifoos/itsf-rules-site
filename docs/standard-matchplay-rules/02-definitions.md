@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: 2. Definitions
-slug: /definitions
+slug: /rules/definitions
 description: The defined terms used consistently throughout the rules, from active possession to wall contact.
 ---
 

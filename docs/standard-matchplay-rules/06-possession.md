@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 title: 6. Possession
-slug: /possession
+slug: /rules/possession
 description: What counts as active, paused, or implicit possession, and its time limits.
 ---
 

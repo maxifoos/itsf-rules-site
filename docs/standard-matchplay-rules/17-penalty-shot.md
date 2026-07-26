@@ -1,7 +1,7 @@
 ---
 sidebar_position: 17
 title: 17. Penalty Shot
-slug: /penalty-shot
+slug: /rules/penalty-shot
 description: How a Penalty Shot is taken, defended, and resolved.
 ---
 

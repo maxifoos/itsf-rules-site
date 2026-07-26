@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "generate-glossary": "node scripts/generate-glossary.js",
-    "prestart": "npm run generate-glossary",
-    "prebuild": "npm run generate-glossary",
+    "generate-data": "node scripts/generate-data.js",
+    "prestart": "npm run generate-data",
+    "prebuild": "npm run generate-data",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",

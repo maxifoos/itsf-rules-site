@@ -42,7 +42,7 @@ const config: Config = {
       'classic',
       {
         docs: {
-          routeBasePath: '/docs',
+          routeBasePath: '/rules',
           sidebarPath: './sidebars.ts',
           remarkPlugins: [glossaryTermsPlugin],
           // No editUrl: this is a public read-only site, so no "Edit this page" link.
@@ -89,15 +89,15 @@ const config: Config = {
           items: [
             {
               label: 'Introduction',
-              to: '/docs/introduction',
+              to: '/rules/introduction',
             },
             {
               label: 'Definitions',
-              to: '/docs/definitions',
+              to: '/rules/definitions',
             },
             {
               label: 'Penalties',
-              to: '/docs/penalties',
+              to: '/rules/penalties',
             },
           ],
         },

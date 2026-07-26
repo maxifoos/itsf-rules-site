@@ -45,8 +45,7 @@ const config: Config = {
           routeBasePath: '/docs',
           sidebarPath: './sidebars.ts',
           remarkPlugins: [glossaryTermsPlugin],
-          editUrl:
-            'https://github.com/maxifoos/itsf-rules-site/tree/main/',
+          // No editUrl: this is a public read-only site, so no "Edit this page" link.
         },
         blog: false,
         theme: {

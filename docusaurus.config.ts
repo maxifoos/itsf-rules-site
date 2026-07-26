@@ -69,12 +69,6 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'rulesSidebar',
-          position: 'left',
-          label: 'Rules',
-        },
-        {
           href: 'https://www.tablesoccer.org',
           label: 'ITSF Website',
           position: 'right',

@@ -3,6 +3,7 @@ import penaltyEntries from '@site/src/data/penalties.json';
 import glossaryEntries from '@site/src/data/glossary.json';
 import {buildGlossaryIndex, splitByGlossaryMatches} from '@site/src/utils/glossaryMatch';
 import GlossaryTerm from '@site/src/components/GlossaryTerm';
+import HoverTooltip from '@site/src/components/HoverTooltip';
 import styles from './styles.module.css';
 
 const penaltyIndex = buildGlossaryIndex(penaltyEntries);
@@ -25,22 +26,27 @@ export default function PenaltyTerm({
   const bodySegments = splitByGlossaryMatches(entry.definition, glossaryIndex);
 
   return (
-    <span className={styles.penaltyTerm} tabIndex={0}>
+    <HoverTooltip
+      triggerClassName={styles.penaltyTerm}
+      tooltipClassName={styles.tooltip}
+      tooltip={
+        <>
+          <span className={styles.tooltipTitle}>{entry.term}</span>
+          <span className={styles.tooltipBody}>
+            {bodySegments.map((segment, i) =>
+              segment.match ? (
+                <GlossaryTerm key={i} term={segment.match.term}>
+                  {segment.text}
+                </GlossaryTerm>
+              ) : (
+                <React.Fragment key={i}>{segment.text}</React.Fragment>
+              ),
+            )}
+          </span>
+        </>
+      }
+    >
       {children}
-      <span className={styles.tooltip} role="tooltip">
-        <span className={styles.tooltipTitle}>{entry.term}</span>
-        <span className={styles.tooltipBody}>
-          {bodySegments.map((segment, i) =>
-            segment.match ? (
-              <GlossaryTerm key={i} term={segment.match.term}>
-                {segment.text}
-              </GlossaryTerm>
-            ) : (
-              <React.Fragment key={i}>{segment.text}</React.Fragment>
-            ),
-          )}
-        </span>
-      </span>
-    </span>
+    </HoverTooltip>
   );
 }

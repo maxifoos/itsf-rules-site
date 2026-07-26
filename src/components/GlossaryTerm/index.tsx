@@ -1,6 +1,7 @@
 import React, {type ReactNode} from 'react';
 import glossaryEntries from '@site/src/data/glossary.json';
 import {buildGlossaryIndex, splitByGlossaryMatches} from '@site/src/utils/glossaryMatch';
+import HoverTooltip from '@site/src/components/HoverTooltip';
 import styles from './styles.module.css';
 
 const glossaryIndex = buildGlossaryIndex(glossaryEntries);
@@ -24,22 +25,27 @@ export default function GlossaryTerm({
   const bodySegments = splitByGlossaryMatches(entry.definition, glossaryIndex, entry.term.toLowerCase());
 
   return (
-    <span className={styles.defTerm} tabIndex={0}>
+    <HoverTooltip
+      triggerClassName={styles.defTerm}
+      tooltipClassName={styles.tooltip}
+      tooltip={
+        <>
+          <span className={styles.tooltipTitle}>{capitalize(entry.term)}</span>
+          <span className={styles.tooltipBody}>
+            {bodySegments.map((segment, i) =>
+              segment.match ? (
+                <strong key={i} className={styles.tooltipTerm}>
+                  {segment.text}
+                </strong>
+              ) : (
+                <React.Fragment key={i}>{segment.text}</React.Fragment>
+              ),
+            )}
+          </span>
+        </>
+      }
+    >
       {children}
-      <span className={styles.tooltip} role="tooltip">
-        <span className={styles.tooltipTitle}>{capitalize(entry.term)}</span>
-        <span className={styles.tooltipBody}>
-          {bodySegments.map((segment, i) =>
-            segment.match ? (
-              <strong key={i} className={styles.tooltipTerm}>
-                {segment.text}
-              </strong>
-            ) : (
-              <React.Fragment key={i}>{segment.text}</React.Fragment>
-            ),
-          )}
-        </span>
-      </span>
-    </span>
+    </HoverTooltip>
   );
 }

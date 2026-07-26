@@ -1,6 +1,8 @@
 ---
 sidebar_position: 4
 title: 4. The Prelude
+slug: /the-prelude
+description: The coin toss, table sides, and ball supply agreed before the first game begins.
 ---
 
 # 4. The Prelude

@@ -1,6 +1,8 @@
 ---
 sidebar_position: 9
 title: 9. Referee
+slug: /referee
+description: The referee's authority, instructions, and the process for requests and appeals.
 ---
 
 # 9. Referee

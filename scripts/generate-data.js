@@ -5,7 +5,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const DOCS_DIR = path.join(__dirname, '..', 'docs');
+const DOCS_DIR = path.join(__dirname, '..', 'docs', 'standard-matchplay-rules');
 const DATA_DIR = path.join(__dirname, '..', 'src', 'data');
 
 // Terms excluded even though they technically appear as a "**Penalty: X**"
@@ -20,8 +20,14 @@ function writeJson(fileName, entries) {
   console.log(`Generated ${entries.length} entries -> ${path.relative(process.cwd(), outputFile)}`);
 }
 
+function readNormalized(fileName) {
+  // Tolerate CRLF line endings so this doesn't silently break on a checkout
+  // or an edit that reintroduces them.
+  return fs.readFileSync(path.join(DOCS_DIR, fileName), 'utf-8').replace(/\r\n/g, '\n');
+}
+
 function generateGlossary() {
-  const content = fs.readFileSync(path.join(DOCS_DIR, '02-definitions.md'), 'utf-8');
+  const content = readNormalized('02-definitions.md');
   const termLine = /\*\*([^*]+)\*\*:\s*(.+)/g;
   const entries = [];
   let match;
@@ -44,7 +50,7 @@ function cleanDescription(raw) {
 }
 
 function generatePenalties() {
-  const content = fs.readFileSync(path.join(DOCS_DIR, '18-penalties.md'), 'utf-8');
+  const content = readNormalized('18-penalties.md');
   const block = /\*\*Penalty: ([^*]+)\*\*\n\n([\s\S]*?)(?=\n\*\*Penalty: |\n*$)/g;
   const entries = [];
   let match;

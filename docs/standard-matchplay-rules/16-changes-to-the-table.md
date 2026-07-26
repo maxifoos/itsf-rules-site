@@ -1,6 +1,8 @@
 ---
 sidebar_position: 16
 title: 16. Changes to the Table
+slug: /changes-to-the-table
+description: Routine and table maintenance, and what counts as an illegal modification.
 ---
 
 # 16. Changes to the Table

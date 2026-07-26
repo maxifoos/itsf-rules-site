@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 title: 3. Match Structure
+slug: /match-structure
+description: How a match is organised into a prelude, games, and periods of active play.
 ---
 
 # 3. Match Structure

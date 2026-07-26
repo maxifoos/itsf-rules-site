@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: 1. Introduction
+slug: /introduction
+description: Background, philosophy, and how to interpret the Standard Matchplay Rules.
 ---
 
 # 1. Introduction

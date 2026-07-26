@@ -1,6 +1,8 @@
 ---
 sidebar_position: 18
 title: 18. Penalties
+slug: /penalties
+description: The catalogue of every penalty outcome referenced throughout the rules.
 ---
 
 # 18. Penalties

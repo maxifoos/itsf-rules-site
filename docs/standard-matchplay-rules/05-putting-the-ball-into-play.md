@@ -1,6 +1,8 @@
 ---
 sidebar_position: 5
 title: 5. Putting the Ball into Play
+slug: /putting-the-ball-into-play
+description: The restart, ready protocol, and opening sequence that start or resume play.
 ---
 
 # 5. Putting the Ball into Play

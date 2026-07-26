@@ -1,6 +1,8 @@
 ---
 sidebar_position: 12
 title: 12. Wall Contact
+slug: /wall-contact
+description: Limits on wall contacts during a single active possession on the 5-rod.
 ---
 
 # 12. Wall Contact

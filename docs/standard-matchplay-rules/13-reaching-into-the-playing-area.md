@@ -1,6 +1,8 @@
 ---
 sidebar_position: 13
 title: 13. Reaching Into the Playing Area
+slug: /reaching-into-the-playing-area
+description: When consent is required to touch the ball or reach into the playing area.
 ---
 
 # 13. Reaching Into the Playing Area

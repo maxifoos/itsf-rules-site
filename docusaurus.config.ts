@@ -1,0 +1,125 @@
+import {themes as prismThemes} from 'prism-react-renderer';
+import type {Config} from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
+
+// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+
+const config: Config = {
+  title: 'ITSF Standard Matchplay Rules',
+  tagline: 'The official rules of table soccer, browsable',
+  favicon: 'img/favicon.ico',
+
+  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
+  future: {
+    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+  },
+
+  // Set the production url of your site here
+  // TODO: replace with your actual GitHub Pages URL, e.g. https://<github-user>.github.io
+  url: 'https://your-github-username.github.io',
+  // Set the /<baseUrl>/ pathname under which your site is served
+  // For GitHub pages deployment, it is often '/<projectName>/'
+  baseUrl: '/itsf-rules-site/',
+
+  // GitHub pages deployment config.
+  // TODO: replace with your actual GitHub org/user name and repo name.
+  organizationName: 'your-github-username', // Usually your GitHub org/user name.
+  projectName: 'itsf-rules-site', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
+  trailingSlash: false,
+
+  onBrokenLinks: 'throw',
+
+  // Even if you don't use internationalization, you can use this field to set
+  // useful metadata like html lang. For example, if your site is Chinese, you
+  // may want to replace "en" with "zh-Hans".
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
+
+  presets: [
+    [
+      'classic',
+      {
+        docs: {
+          routeBasePath: '/docs',
+          sidebarPath: './sidebars.ts',
+          // TODO: replace with your repo URL, or remove to drop the "edit this page" links.
+          editUrl:
+            'https://github.com/your-github-username/itsf-rules-site/tree/main/',
+        },
+        blog: false,
+        theme: {
+          customCss: './src/css/custom.css',
+        },
+      } satisfies Preset.Options,
+    ],
+  ],
+
+  themeConfig: {
+    // Replace with your project's social card
+    image: 'img/docusaurus-social-card.jpg',
+    colorMode: {
+      respectPrefersColorScheme: true,
+    },
+    navbar: {
+      title: 'ITSF Standard Matchplay Rules',
+      logo: {
+        alt: 'ITSF Logo',
+        src: 'img/logo.svg',
+      },
+      items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'rulesSidebar',
+          position: 'left',
+          label: 'Rules',
+        },
+        {
+          href: 'https://www.tablesoccer.org',
+          label: 'ITSF Website',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Rules',
+          items: [
+            {
+              label: 'Introduction',
+              to: '/docs/introduction',
+            },
+            {
+              label: 'Definitions',
+              to: '/docs/definitions',
+            },
+            {
+              label: 'Penalties',
+              to: '/docs/penalties',
+            },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'ITSF Website',
+              href: 'https://www.tablesoccer.org',
+            },
+          ],
+        },
+      ],
+      copyright: `Unofficial rendering of the ITSF Standard Matchplay Rules 2024 (Version 2.0, December 2023). Built with Docusaurus. © ${new Date().getFullYear()}.`,
+    },
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+    },
+  } satisfies Preset.ThemeConfig,
+};
+
+export default config;
